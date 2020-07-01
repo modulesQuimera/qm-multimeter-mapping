@@ -1,0 +1,25 @@
+{
+  "name": "qm-hub-multimeter-mapping-get-voltage",
+  "version": "1.0.0",
+  "description": "multimeter mapping get-voltage module - Node-Red",
+  "main": "multimeter-slot1-mapping.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesQuimera/qm-hub-multimeter-mapping-get-voltage.git"
+  },
+  "keywords": ["quimera", "hub", "JIG"],
+  "author": "HUB-LSE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesQuimera/qm-hub-multimeter-mapping-get-voltage/issues"
+  },
+  "homepage": "https://github.com/modulesQuimera/qm-hub-multimeter-mapping-get-voltage#readme",
+  "node-red": {
+		"nodes": {
+			"multimeter-slot1-mapping": "multimeter-slot1-mapping.js"
+		}
+	}
+}
