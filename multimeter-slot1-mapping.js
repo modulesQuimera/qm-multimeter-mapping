@@ -2,6 +2,7 @@
 module.exports = function(RED) {
     function multimeterSlot1MappingNode(config) {
         RED.nodes.createNode(this,config);
+        this.slot = config.slot;
         this.labelPort1 = config.labelPort1;
         this.valuePort1 = config.valuePort1;
         this.labelPort2 = config.labelPort2;

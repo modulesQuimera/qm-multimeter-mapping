@@ -1,6 +1,6 @@
 <style>
-    .label-resp{
-        width: 40% !important;
+    .label-resp-voltage{
+        width: 20% !important;
     }
 
     .input-resp-map{
@@ -20,95 +20,100 @@
 </style>
 
 <script type="text/html" data-template-name="multimeter-slot1-mapping">
-    <!-- <div class="form-row">
-        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-config-input-name" style="width:87%; margin-left: -45px">
-    </div> -->
+    <div class="form-row columm">
+        <label  for="node-config-input-name"><i class="fa fa-tag"></i> Mapping Name</label>
+        <input type="text" id="node-config-input-name" style="width:80%;">
+    </div>
+    <div class="form-row columm">
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input min="0" type="number" id="node-config-input-slot" style="width:20%;">
+    </div>
+    <hr class="hr-full">
     <h2>SLOT 1 Multimeter modular mapping - getVoltage</h2>
 
     <div class="global"></div>
 
     <div class="divA">
         <div class="form-row">
-            <label class="label-resp">  A1 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort1" class="input-resp-map">
+            <label class="label-resp-voltage">  A1 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort1" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A2 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort2" class="input-resp-map">
+            <label class="label-resp-voltage">  A2 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort2" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A3 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort3" class="input-resp-map">
+            <label class="label-resp-voltage">  A3 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort3" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A4 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort4" class="input-resp-map">
+            <label class="label-resp-voltage">  A4 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort4" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A5 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort5" class="input-resp-map">
+            <label class="label-resp-voltage">  A5 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort5" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A6 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort6" class="input-resp-map">
+            <label class="label-resp-voltage">  A6 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort6" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A7 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort7" class="input-resp-map">
+            <label class="label-resp-voltage">  A7 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort7" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A8 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort8" class="input-resp-map">
+            <label class="label-resp-voltage">  A8 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort8" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  A9 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort9" class="input-resp-map">
+            <label class="label-resp-voltage">  A9 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort9" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> A10 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort10" class="input-resp-map">
+            <label class="label-resp-voltage"> A10 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort10" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> A11 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort11" class="input-resp-map">
+            <label class="label-resp-voltage"> A11 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort11" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> APW - </label><input  maxlength="8" type="text" id="node-config-input-labelPort12" class="input-resp-map">
+            <label class="label-resp-voltage"> APW - </label><input  maxlength="8" type="text" id="node-config-input-labelPort12" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> AMX - </label><input  maxlength="8" type="text" id="node-config-input-labelPort13" class="input-resp-map">
+            <label class="label-resp-voltage"> AMX - </label><input  maxlength="8" type="text" id="node-config-input-labelPort13" class="input-resp-map">
         </div>  
     </div>
 
     <div class="divB">
         <div class="form-row">
-            <label class="label-resp">  B1 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort14" class="input-resp-map">
+            <label class="label-resp-voltage">  B1 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort14" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B2 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort15" class="input-resp-map">
+            <label class="label-resp-voltage">  B2 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort15" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B3 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort16" class="input-resp-map">
+            <label class="label-resp-voltage">  B3 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort16" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B4 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort17" class="input-resp-map">
+            <label class="label-resp-voltage">  B4 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort17" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B5 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort18" class="input-resp-map">
+            <label class="label-resp-voltage">  B5 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort18" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B6 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort19" class="input-resp-map">
+            <label class="label-resp-voltage">  B6 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort19" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B7 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort20" class="input-resp-map">
+            <label class="label-resp-voltage">  B7 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort20" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B8 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort21" class="input-resp-map">
+            <label class="label-resp-voltage">  B8 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort21" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp">  B9 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort22" class="input-resp-map">
+            <label class="label-resp-voltage">  B9 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort22" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> B10 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort23" class="input-resp-map">
+            <label class="label-resp-voltage"> B10 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort23" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> B11 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort24" class="input-resp-map">
+            <label class="label-resp-voltage"> B11 - </label><input  maxlength="8" type="text" id="node-config-input-labelPort24" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> BPW - </label><input  maxlength="8" type="text" id="node-config-input-labelPort25" class="input-resp-map">
+            <label class="label-resp-voltage"> BPW - </label><input  maxlength="8" type="text" id="node-config-input-labelPort25" class="input-resp-map">
         </div>
         <div class="form-row">
-            <label class="label-resp"> BMX - </label><input  maxlength="8" type="text" id="node-config-input-labelPort26" class="input-resp-map">
+            <label class="label-resp-voltage"> BMX - </label><input  maxlength="8" type="text" id="node-config-input-labelPort26" class="input-resp-map">
         </div>
     </div>
 </script>
@@ -121,59 +126,60 @@
     RED.nodes.registerType('multimeter-slot1-mapping',{
         category: 'config',
         defaults: {
-            name: {value:"Multimeter modular slot 1 mapping - getVoltage"},
-            labelPort1: {value: "TP", required: true},
-            valuePort1: {value: "0", required: true},
-            labelPort2: {value: "TP", required: true},
-            valuePort2: {value: "1", required: true},
-            labelPort3: {value: "TP", required: true},
-            valuePort3: {value: "2", required: true},
-            labelPort4: {value: "TP", required: true},
-            valuePort4: {value: "3", required: true},
-            labelPort5: {value: "TP", required: true},
-            valuePort5: {value: "4", required: true},
-            labelPort6: {value: "TP", required: true},
-            valuePort6: {value: "5", required: true},
-            labelPort7: {value: "TP", required: true},
-            valuePort7: {value: "6", required: true},
-            labelPort8: {value: "TP", required: true},
-            valuePort8: {value: "7", required: true},
-            labelPort9: {value: "TP", required: true},
-            valuePort9: {value: "8", required: true},
-            labelPort10: {value: "TP", required: true},
-            valuePort10: {value: "9", required: true},
-            labelPort11: {value: "TP", required: true},
-            valuePort11: {value: "10", required: true},
-            labelPort12: {value: "TP", required: true},
-            valuePort12: {value: "11", required: true},
-            labelPort13: {value: "TP", required: true},
-            valuePort13: {value: "12", required: true},
-            labelPort14: {value: "TP", required: true},
-            valuePort14: {value: "13", required: true},
-            labelPort15: {value: "TP", required: true},
-            valuePort15: {value: "14", required: true},
-            labelPort16: {value: "TP", required: true},
-            valuePort16: {value: "15", required: true},
-            labelPort17: {value: "TP", required: true},
-            valuePort17: {value: "16", required: true},
-            labelPort18: {value: "TP", required: true},
-            valuePort18: {value: "17", required: true},
-            labelPort19: {value: "TP", required: true},
-            valuePort19: {value: "18", required: true},
-            labelPort20: {value: "TP", required: true},
-            valuePort20: {value: "19", required: true},
-            labelPort21: {value: "TP", required: true},
-            valuePort21: {value: "20", required: true},
-            labelPort22: {value: "TP", required: true},
-            valuePort22: {value: "21", required: true},
-            labelPort23: {value: "TP", required: true},
-            valuePort23: {value: "22", required: true},
-            labelPort24: {value: "TP", required: true},
-            valuePort24: {value: "23", required: true},
-            labelPort25: {value: "TP", required: true},
-            valuePort25: {value: "24", required: true},
-            labelPort26: {value: "TP", required: true},
-            valuePort26: {value: "25", required: true},
+            name: {value:""},
+            slot: {value:"", required:true},
+            labelPort1: {value: ""},
+            valuePort1: {value: "0"},
+            labelPort2: {value: ""},
+            valuePort2: {value: "1"},
+            labelPort3: {value: ""},
+            valuePort3: {value: "2"},
+            labelPort4: {value: ""},
+            valuePort4: {value: "3"},
+            labelPort5: {value: ""},
+            valuePort5: {value: "4"},
+            labelPort6: {value: ""},
+            valuePort6: {value: "5"},
+            labelPort7: {value: ""},
+            valuePort7: {value: "6"},
+            labelPort8: {value: ""},
+            valuePort8: {value: "7"},
+            labelPort9: {value: ""},
+            valuePort9: {value: "8"},
+            labelPort10: {value: ""},
+            valuePort10: {value: "9"},
+            labelPort11: {value: ""},
+            valuePort11: {value: "10"},
+            labelPort12: {value: ""},
+            valuePort12: {value: "11"},
+            labelPort13: {value: ""},
+            valuePort13: {value: "12"},
+            labelPort14: {value: ""},
+            valuePort14: {value: "13"},
+            labelPort15: {value: ""},
+            valuePort15: {value: "14"},
+            labelPort16: {value: ""},
+            valuePort16: {value: "15"},
+            labelPort17: {value: ""},
+            valuePort17: {value: "16"},
+            labelPort18: {value: ""},
+            valuePort18: {value: "17"},
+            labelPort19: {value: ""},
+            valuePort19: {value: "18"},
+            labelPort20: {value: ""},
+            valuePort20: {value: "19"},
+            labelPort21: {value: ""},
+            valuePort21: {value: "20"},
+            labelPort22: {value: ""},
+            valuePort22: {value: "21"},
+            labelPort23: {value: ""},
+            valuePort23: {value: "22"},
+            labelPort24: {value: ""},
+            valuePort24: {value: "23"},
+            labelPort25: {value: ""},
+            valuePort25: {value: "24"},
+            labelPort26: {value: ""},
+            valuePort26: {value: "25"},
         },
         label: function() { return this.name || "" },
     });
