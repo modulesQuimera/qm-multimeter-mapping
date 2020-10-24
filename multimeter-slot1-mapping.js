@@ -55,6 +55,14 @@ module.exports = function(RED) {
         this.valuePort25 = config.valuePort25;
         this.labelPort26 = config.labelPort26;
         this.valuePort26 = config.valuePort26;
+        this.labelPort27 = config.labelPort27;
+        this.valuePort27 = config.valuePort27;
+        this.labelPort28 = config.labelPort28;
+        this.valuePort28 = config.valuePort28;
+        this.labelPort29 = config.labelPort29;
+        this.valuePort29 = config.valuePort29;
+        this.labelPort30 = config.labelPort30;
+        this.valuePort30 = config.valuePort30;
     }
     RED.nodes.registerType("multimeter-slot1-mapping", multimeterSlot1MappingNode);
 }
