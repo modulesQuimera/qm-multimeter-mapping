@@ -1,2 +1,2 @@
-# qm-hub-multimeter-mapping-get-voltage
-multimeter mapping get-voltage module - Node-Red
+# qm-hub-multimeter-mapping
+multimeter mapping modules - Node-Red
