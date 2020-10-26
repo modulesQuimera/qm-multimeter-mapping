@@ -1,5 +1,5 @@
 {
-  "name": "qm-multimeter-mapping-get-voltage",
+  "name": "qm-multimeter-mapping",
   "version": "1.0.6",
   "description": "multimeter mapping get-voltage module - Node-Red",
   "main": "multimeter-slot1-mapping.js",
