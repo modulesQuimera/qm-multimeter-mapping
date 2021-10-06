@@ -78,12 +78,18 @@
             $("#red-ui-editor-config-scope").val($("#red-ui-editor-config-scope option:first").val());
         },
         oneditprepare: function() { 
+            var type;
+            node = this;
             $("#node-config-input-mappingType").on("change", function(e) {
                 var compare = $(this).val();
-                if (compare === "1") { $(".MAP1").show(); $(".MAP2").hide();}
-                if (compare === "2") { $(".MAP2").show(); $(".MAP1").hide();}
+                if (compare === "1") { $(".MAP1").show(); $(".MAP2").hide(); type = "Multimeter"}
+                if (compare === "2") { $(".MAP2").show(); $(".MAP1").hide(); type = "Multiplexer"}
+
+                $("#SLOT").text(`INSTANCE ${node.slot != undefined ? node.slot : "" } ${type} modular mapping`);
             });
-            $("#SLOT").text(`INSTANCE ${this.slot != undefined ? this.slot : "" } Multimeter modular mapping`);
+
+            type = $("#node-config-input-mappingType").val() == "1"? "Multimeter" : " Multiplexer";
+            $("#SLOT").text(`INSTANCE ${node.slot != undefined ? node.slot : "" } ${type} modular mapping`);
         }
     });
 </script>
@@ -107,7 +113,7 @@
         <input min="1" max="9" type="number" id="node-config-input-slot" style="width:20%;">
     </div>
     <div class="form-row columm">
-        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i>Mapping type</label>
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Mapping type</label>
         <select id="node-config-input-mappingType">
             <option value="1" selected>Multimeter</option> 
             <option value="2">Multiplexer</option> 
@@ -115,36 +121,36 @@
     </div>
     <hr class="hr-full">
     <h2 id="SLOT"></h2>
-    <h3>Conector XG4A-3034</h3>
     <div class="global">
         <div class="MAP1">
+            <h3>Conector XG4A-3034</h3>
             <div class="divA">
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A1 - PIN 1 </label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A1 - PIN 29 </label>
                     <input   type="text" id="node-config-input-labelPort1" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A2 - PIN 3</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A2 - PIN 27</label>
                     <input   type="text" id="node-config-input-labelPort2" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A3 - PIN 5</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A3 - PIN 25</label>
                     <input   type="text" id="node-config-input-labelPort3" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A4 - PIN 7</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A4 - PIN 23</label>
                     <input   type="text" id="node-config-input-labelPort4" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A5 - PIN 9</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A5 - PIN 21</label>
                     <input   type="text" id="node-config-input-labelPort5" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A6 - PIN 11 </label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A6 - PIN 19 </label>
                     <input   type="text" id="node-config-input-labelPort6" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A7 - PIN 13</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A7 - PIN 17</label>
                     <input   type="text" id="node-config-input-labelPort7" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
@@ -152,62 +158,62 @@
                     <input   type="text" id="node-config-input-labelPort8" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A9 - PIN 17</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  A9 - PIN 13</label>
                     <input   type="text" id="node-config-input-labelPort9" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> A10 - PIN 19</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> A10 - PIN 11</label>
                     <input   type="text" id="node-config-input-labelPort10" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> A11 - PIN 21</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> A11 - PIN 9</label>
                     <input   type="text" id="node-config-input-labelPort11" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> AGND - PIN 23</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> AGND - PIN 7</label>
                     <input   type="text" id="node-config-input-labelPort12" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> APW - PIN 25</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> APW - PIN 5</label>
                     <input   type="text" id="node-config-input-labelPort13" class="input-resp-map">
                 </div>  
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> BPW - PIN 27</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> BPW - PIN 3</label>
                     <input   type="text" id="node-config-input-labelPort14" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> CPW - PIN 29</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> CPW - PIN 1</label>
                     <input   type="text" id="node-config-input-labelPort15" class="input-resp-map">
                 </div>
             </div>
         
             <div class="divB">
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B1 - PIN 2</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B1 - PIN 30</label>
                     <input   type="text" id="node-config-input-labelPort16" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B2 - PIN 4</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B2 - PIN 28</label>
                     <input   type="text" id="node-config-input-labelPort17" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B3 - PIN 6</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B3 - PIN 26</label>
                     <input   type="text" id="node-config-input-labelPort18" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B4 - PIN 8</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B4 - PIN 24</label>
                     <input   type="text" id="node-config-input-labelPort19" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B5 - PIN 10</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B5 - PIN 22</label>
                     <input   type="text" id="node-config-input-labelPort20" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B6 - PIN 12</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B6 - PIN 20</label>
                     <input   type="text" id="node-config-input-labelPort21" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B7 - PIN 14</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B7 - PIN 18</label>
                     <input   type="text" id="node-config-input-labelPort22" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
@@ -215,37 +221,38 @@
                     <input   type="text" id="node-config-input-labelPort23" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B9 - PIN 18</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  B9 - PIN 14</label>
                     <input   type="text" id="node-config-input-labelPort24" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> B10 - PIN 20</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> B10 - PIN 12</label>
                     <input   type="text" id="node-config-input-labelPort25" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> B11 - PIN 22</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> B11 - PIN 10</label>
                     <input   type="text" id="node-config-input-labelPort26" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> INPW - PIN 24</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> INPW - PIN 8</label>
                     <input   type="text" id="node-config-input-labelPort27" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> IAPW - PIN 26</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> IAPW - PIN 6</label>
                     <input   type="text" id="node-config-input-labelPort28" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> IBPW - PIN 28</label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> IBPW - PIN 4</label>
                     <input   type="text" id="node-config-input-labelPort29" class="input-resp-map">
                 </div>
                 <div class="form-row-luck">
-                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> ICPW - PIN 30 </label>
+                    <label class="label-resp-voltage"><i class="fa fa-microchip"></i> ICPW - PIN 2 </label>
                     <input   type="text" id="node-config-input-labelPort30" class="input-resp-map">
                 </div>
             </div>
         </div>
 
         <div class="MAP2" style="display:none">
+            <h3>Conector 277-9774-ND</h3>
             <div class="divA">
                 <div class="form-row-luck">
                     <label class="label-resp-voltage"><i class="fa fa-microchip"></i>  AMX - PIN 1 </label>
